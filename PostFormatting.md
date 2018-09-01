@@ -94,7 +94,7 @@ There are two *big* advantages to doing your formatting here in the back-end - a
     html = html.delete("\n")
 ```
 
-This is where the formatting is actually done on local posts, and where you'll add your own formatting function. What you're formatting and how will affect where you want to put your function in this, to some degree. For example, if you want to do something like I did and style a line if it starts with a particular character, you want to make sure to format *after* `simple_format` - because that's where it adds the <p> tags you'll most likely want to put your class onto.
+This is where the formatting is actually done on local posts, and where you'll add your own formatting function. What you're formatting and how will affect where you want to put your function in this, to some degree. For example, if you want to do something like I did and style a line if it starts with a particular character, you want to make sure to format *after* `simple_format` - because that's where it adds the `<p>` tags you'll most likely want to put your class onto.
 
 If you're trying to make some sort of markdown formatting, you should most likely do it right after `html = raw_content` and before any of the other tags have been applied.
 
